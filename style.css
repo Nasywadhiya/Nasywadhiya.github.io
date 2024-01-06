@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* color palette */
+:root {
+  --hijau-muda: #004a2f;
+  --hijau-tua: #002f35;
+  --orange: #ff6337;
+  --kuning: #ffa323;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* background start*/
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(image/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 50px;
+}
+/* background end*/
+
+.container {
+  position: relative;
+  width: calc(100% - 100px);
+  min-height: 450px;
+  background: rgb(255, 255, 255, 0.5);
+  box-shadow: 0 15px 35px rgb(0, 0, 0, 0.05);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  left: 20px;
+  top: -10px;
+}
+
+/* navbar start*/
+header {
+  position: absolute;
+  top: -40px;
+  right: 20px;
+  left: 20px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgb(0, 0, 0, 0.05);
+  border-radius: 17px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  border-top: 1px solid rgb(255, 255, 255, 0.5);
+  border-left: 1px solid rgb(255, 255, 255, 0.5);
+}
+
+header .logo img {
+  top: -73px;
+  left: -35px;
+  position: absolute;
+  width: 230px;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #002f35;
+  padding: 8px 15px;
+  border-radius: 25px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+/* navbar end*/
+
+/* main start*/
+.content {
+  transform: translate(-115px);
+  max-width: 700px;
+  box-shadow: 0 15px 30px rgb(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  border-top: 1px solid rgb(255, 255, 255, 0.5);
+  border-left: 1px solid rgb(255, 255, 255, 0.5);
+  padding: 40px;
+  padding-left: 110px;
+}
+
+.content h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #002f35;
+}
+
+.content p {
+  font-size: 1.2em;
+  color: #002f35;
+}
+
+.content button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  color: #002f35;
+  margin-top: 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+/* main end*/
+
+/* image start*/
+.imgbox {
+  width: 50vmin;
+  position: absolute;
+  overflow: hidden;
+  transform: translate(-10%, -50%);
+  top: 50%;
+  left: 68%;
+}
+
+.imgbox img {
+  max-width: 300px;
+  margin-right: 20px;
+  -moz-animation: rota-full-left 20s infinite linear;
+  -webkit-animation: rota-full-left 20s infinite linear;
+}
+
+@-moz-keyframes rota-full-left {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes rota-full-left {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  animation: slide 16s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  55% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+/* image end*/
+
+/* footer start*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  align-items: center;
+  width: 100%;
+  width: calc(100%-50px);
+  box-sizing: border-box;
+  left: 0;
+  top: 500px;
+  padding: 10px;
+  background: rgb(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgb(0, 0, 0, 0.05);
+  border-radius: 17px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  border-top: 1px solid rgb(255, 255, 255, 0.5);
+  border-left: 1px solid rgb(255, 255, 255, 0.5);
+}
+
+footer .isi-footer {
+  display: flex;
+  margin: 0 10px;
+}
+
+footer .icon {
+  color: #002f35;
+  margin: 0 10px;
+}
+
+footer p {
+  color: #002f35;
+  font-weight: 500;
+}
+/* footer start*/
